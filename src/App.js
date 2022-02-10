@@ -21,7 +21,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h2>Styling using Functional and Class Component</h2>
+        <h1>Styling using Functional and Class Component</h1>
 
         <div className="flex container">
           <div className="left-area">

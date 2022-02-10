@@ -12,11 +12,11 @@
 }
 
 button {
-  height: 2rem;
-  width: 10rem;
-  border-radius: 10px;
+  margin-top: 1rem;
+  height: 4rem;
+  width: 20rem;
+  border-radius: 20px;
   border: 1px solid black;
-  font-size: 10px;
   background: rgb(248, 247, 201);
 }
 
@@ -28,23 +28,37 @@ button:hover {
 .left-area {
   width: 45%;
 }
+.left-area button {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+}
 .right-area {
   width: 45%;
 }
-p {
-  font-size: 12px;
+.right-area button {
+  display: flex;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
 }
-
 .card {
-  height: 10rem;
-  border-radius: 20px;
+  height: 18rem;
+  border-radius: 50px;
   border: 1px solid black;
-  margin-top: 1rem;
+  margin-top: 3rem;
+  padding: 1rem;
+}
+h2 {
+  font-size: 2rem;
+}
+p {
+  font-size: 1.4rem;
 }
 .classCompo {
   background: rgb(219, 110, 188);
 }
 .funcCompo {
   background: rgb(136, 233, 136);
-  /* border:solid black; */
 }
