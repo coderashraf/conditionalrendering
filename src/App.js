@@ -1,40 +1,20 @@
 import React, { Component } from "react";
-import ClassCompo from "./ClassCompo";
-import { FunctionalCompo } from "./FunctionalCompo";
 import "./App.css";
-
+import ClassCompo from "./ClassCompo";
+import FunctionalCompo  from "./FunctionalCompo";
 export default class App extends Component {
   state = {
-    showFuncCompo: false,
-    showClassCompo: false,
-  };
-  toggleFunc = () => {
-    this.setState({
-      showFuncCompo: !this.state.showFuncCompo,
-    });
-  };
-  toggleClass = () => {
-    this.setState({
-      showClassCompo: !this.state.showClassCompo,
-    });
+    showFuncCompo: true,
   };
   render() {
     return (
       <div>
-        <h1>Styling using Functional and Class Component</h1>
-
-        <div className="flex container">
-          <div className="left-area">
-            <button onClick={this.toggleFunc}>
-              Toggle Functional Component
-            </button>
-            {this.state.showFuncCompo && <FunctionalCompo />}
-          </div>
-          <div className="right-area">
-            <button onClick={this.toggleClass}>Toggle Class Component</button>
-            {this.state.showClassCompo && <ClassCompo />}
-          </div>
-        </div>
+        <ClassCompo/>
+        {this.state.showFuncCompo && <FunctionalCompo/>}
+        {this.state.showFuncCompo?(
+          <FunctionalCompo/>
+        ):(<p>Functional Component is hidden</p>)}
+        <button onClick={()=>this.setState({showFuncCompo:!this.state.showFuncCompo})}>CLick</button>
       </div>
     );
   }
